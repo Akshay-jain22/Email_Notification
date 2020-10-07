@@ -1,5 +1,12 @@
 # Email_Notification
 
+# Website Screenshots
+
+![User Form](UserForm.png)
+
+![Admin Form](AdminForm.png)
+
+
 #Link For the Spreadsheet :
 https://docs.google.com/spreadsheets/d/1wwGRfO0WvHWLbhku-J5-U13fyWIqo9JiN6XU1JFrggE/edit#gid=0
 
