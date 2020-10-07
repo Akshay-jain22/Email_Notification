@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+    </script>
+
+    <script src="script_user.js"></script>
+
+    <link rel="stylesheet" href="style_admin.css">
+    
+    <title>Email Notification</title>
+</head>
+<body>
+
+    <form action="" method="">
+        <div class="mail-box">
+          <h1>Send Email</h1>
+
+          <div class="textbox">
+            <input type="Email" id="adminEmail" placeholder="Admin's Email" required>
+          </div>
+
+          <div class="textbox">
+            <input type="Password" id="adminPassword" placeholder="Password" required>
+          </div>
+
+          <div class="textbox">
+            <input type="text" id="subject" placeholder="Subject" required>
+          </div>
+
+          <div class="textbox">
+            <input type="multilinetext" id="body" placeholder="Body" required>
+          </div>
+
+          <select class="filter" placeholder="Select Cinema" required>
+            <option value="" id="option" style="color: black;">Select Filter to send Mail</option>
+            <option value="Location" id="option" style="color: #ff12e7;">On basis of Location</option>
+            <option value="Name" id="option" style="color: #ff12e7;">On basis of first character of Username</option>
+            <option value="All" id="option" style="color: #ff12e7;">Send to All</option>
+          </select>
+
+          <div class="textbox">
+            <input type="text" id="filtertext" required>
+          </div>
+
+          <input type="submit" class="btn" value="Send Email" onclick="sendEMail()" />
+        </div>
+    </form>
+
+</body>
+</html>

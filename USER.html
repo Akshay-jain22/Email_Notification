@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Registration</title>
+
+    <link rel="stylesheet" href="style_user.css">
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous">
+    </script>
+
+    <script>
+      function SubForm (){
+        var name = $("#username").val();
+        var email = $("#useremail").val();
+        var city = $("#usercity").val();
+
+        if(name=="" || email=="" || city==""){
+          alert("Incomplete Credentials" + name + email + city);
+        }
+        else{
+          $.ajax({
+            url:"https://api.apispreadsheets.com/data/1840/",
+            type:"post",
+            data:$("#userform").serializeArray(),
+            success: function(){
+              alert("Form Data Submitted :)")
+            },
+            error: function(){
+              alert("There was an error :(")
+            }
+          });
+        }
+
+      }
+    </script>
+
+  </head>
+  <body>
+
+      <form action="" method="" id="userform" class="login-box">
+          <h1>Register</h1>
+
+          <div class="textbox">
+            <input type="text" name="Name" id="username" placeholder="Username" required>
+          </div>
+
+          <div class="textbox">
+            <input type="email" name="Email" id="useremail" placeholder="Email" required>
+          </div>
+
+          <div class="textbox">
+            <input type="text" name="City" id="usercity" placeholder="City" required>
+          </div>
+
+    </form>
+
+    <button type="submit" class="btn" onclick="SubForm()">SUBMIT</button>
+
+  </body>
+</html>
